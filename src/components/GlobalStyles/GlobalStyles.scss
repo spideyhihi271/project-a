@@ -1,0 +1,56 @@
+//Reset CSS
+@import 'normalize.css';
+
+//Fontawesome
+@import '../../assets/vendors/fonts/css/all.css';
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+//Variables
+:root {
+    // Var: Color
+    --main-color: #6350cf;
+    --second-color: #191b2a;
+    --bg-color: #0f0108;
+    --text-color: #3d4563;
+    --header-bg-color: #0f0f17;
+    // Var: Size
+    --content-sesson-w: 1200px;
+    --header-session-h: 80px;
+}
+
+//Configs
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+    color: var(--text-color);
+    overflow-y: overlay;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+//Mixing
+
+//Animations
