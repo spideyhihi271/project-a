@@ -1,8 +1,9 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 
+import Popper from '~/components/Popper';
 import styles from './Header.module.scss';
+import Notify from '~/components/Notify';
 const cx = classNames.bind(styles);
 function Header() {
     return (
@@ -35,8 +36,31 @@ function Header() {
                         </ul>
                     </nav>
                 </div>
-                <div className="actions">
-                    <ul className={cx('action-list')}></ul>
+                <div className={cx('actions')}>
+                    <ul className={cx('actions-list')}>
+                        <Popper>
+                            <button className={cx('actions-item')}>
+                                <i className="fa-thin fa-magnifying-glass"></i>
+                            </button>
+                        </Popper>
+                        <Popper show={<Notify />}>
+                            <button className={cx('actions-item')}>
+                                <i className="fa-thin fa-bell"></i>
+                            </button>
+                        </Popper>
+                        <Popper>
+                            <button className={cx('actions-item')}>
+                                <i className="fa-thin fa-circle"></i>
+                            </button>
+                        </Popper>
+                        <Popper>
+                            <img
+                                src="https://vcdn-suckhoe.vnecdn.net/2017/03/31/hinh1-5821-1490926721.jpg"
+                                alt=""
+                                className={cx('logger-lable')}
+                            />
+                        </Popper>
+                    </ul>
                 </div>
             </header>
         </div>

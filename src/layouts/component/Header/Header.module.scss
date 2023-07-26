@@ -45,3 +45,25 @@
         color: var(--text-color);
     }
 }
+.actions {
+    width: fit-content;
+    &-list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &-item {
+        margin: 0 16px;
+        color: white;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+.logger-lable {
+    margin: 0 16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
