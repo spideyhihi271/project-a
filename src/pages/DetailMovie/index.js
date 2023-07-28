@@ -1,7 +1,12 @@
 import React from 'react';
+import DetailMovieHeader from '~/components/DetailMovieHeader/DetailMovieHeader';
 
 function DetailMovie() {
-    return <div>DetailMovie</div>;
+    return (
+        <>
+            <DetailMovieHeader />
+        </>
+    );
 }
 
 export default DetailMovie;

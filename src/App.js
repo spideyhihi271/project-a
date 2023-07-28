@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { publicRoutes } from './routes';
-import { MainLayout } from './layouts';
+import { FlexLayout, MainLayout } from './layouts';
 
 function App() {
     return (

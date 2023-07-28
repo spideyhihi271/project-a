@@ -1,8 +1,10 @@
 const routes = {
     home: '/',
-    detailMovie: '/movie/:id',
+    detailMovie: '/movie',
     search: '/search',
-    detailActor: '/actor/:id',
+    detailActor: '/actor',
+    packages: '/package',
+    payment: '/payment',
 };
 
 export default routes;

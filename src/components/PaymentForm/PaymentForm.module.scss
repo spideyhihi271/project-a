@@ -1,0 +1,29 @@
+.payment-form {
+    width: 100%;
+    color: white;
+    &-title {
+        font-size: 3rem;
+    }
+    &-description {
+        color: var(--text-color);
+        margin-bottom: 32px;
+        span {
+            color: var(--main-color);
+            text-decoration: underline;
+        }
+    }
+    &-btn {
+        width: 80%;
+        height: 40px;
+        margin-top: 16px;
+        border: 1px solid var(--main-color);
+        background-color: transparent;
+        color: var(--main-color);
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background-color: var(--main-color);
+            color: var(--text-color);
+        }
+    }
+}

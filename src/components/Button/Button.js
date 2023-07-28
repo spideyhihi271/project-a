@@ -5,35 +5,33 @@ import styles from './Button.module.scss';
 import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
-function Button(props) {
-    const {
-        to,
-        href,
-        primary = false,
-        outline = false,
-        text = false,
-        rounded = false,
-        disabled = false,
-        small = false,
-        large = false,
-        children,
-        className,
-        leftIcon,
-        rightIcon,
-        onClick,
-        ...passProps
-    } = props;
-    const compProps = {
+function Button({
+    to,
+    href,
+    primary = false,
+    outline = false,
+    text = false,
+    disabled = false,
+    small = false,
+    large = false,
+    children,
+    className,
+    leftIcon,
+    rightIcon,
+    onClick,
+    ...passProps
+}) {
+    const props = {
         onClick,
         ...passProps,
     };
     // Check type button
     let Comp = 'button';
     if (href) {
-        compProps.href = href;
+        props.href = href;
         Comp = 'a';
     } else if (to) {
-        compProps.to = to;
+        props.to = to;
         Comp = Link;
     }
     // Remove event listener when btn is disabled
@@ -48,16 +46,14 @@ function Button(props) {
     const classes = cx('wrapper', {
         [className]: className,
         primary,
-        primary,
         outline,
         text,
-        rounded,
     });
 
     return (
-        <Comp className={classes} {...compProps}>
+        <Comp className={classes} {...props}>
             {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
-            {children}
+            <span className={cx('content')}>{children}</span>
             {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
     );

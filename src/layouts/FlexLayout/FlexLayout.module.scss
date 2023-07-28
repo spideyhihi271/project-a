@@ -1,0 +1,14 @@
+.wrapper {
+    margin-top: var(--header-session-h);
+    padding: 1% var(--content-sesson-padding);
+}
+.flex-layout {
+    display: flex;
+    height: 300px;
+    &-aside {
+        flex: 1;
+    }
+    &-main {
+        flex: 1.5;
+    }
+}
