@@ -1,0 +1,72 @@
+.wrapper {
+    padding: 0 var(--content-sesson-padding);
+    width: 50%;
+}
+.comment {
+    color: white;
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-title {
+            font-size: 2rem;
+        }
+        &-view {
+            background-color: transparent;
+            color: white;
+        }
+    }
+    &-box {
+        display: flex;
+        flex-direction: column;
+        margin: 8px 0;
+        input {
+            height: 50px;
+            padding-left: 15px;
+            border-radius: 10px;
+            color: white;
+            background-color: var(--second-color);
+            &::placeholder {
+                color: var(--text-color);
+            }
+        }
+        button {
+            align-self: flex-end;
+            width: 120px;
+            height: 40px;
+            margin: 8px 0;
+            border-radius: 10px;
+            &:disabled {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.comment-list-item {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #151515;
+}
+.comment-item {
+    &-header {
+        display: flex;
+        align-items: center;
+        .name {
+            color: white;
+        }
+        i {
+            font-size: 0.5rem;
+            margin: 0 16px;
+        }
+        .public {
+            color: var(--text-color);
+        }
+    }
+    &-content {
+        font-size: 1.4rem;
+
+        color: white;
+    }
+}

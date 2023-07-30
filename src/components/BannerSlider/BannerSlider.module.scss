@@ -7,6 +7,15 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    &-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+    }
     &-bg {
         position: absolute;
         top: 0;
@@ -78,5 +87,59 @@
         color: var(--text-color);
         font-size: 1.4rem;
         margin: 8px 0;
+    }
+    &-actions {
+        display: flex;
+    }
+}
+
+// Nav Slider
+.nav-slider {
+    position: absolute;
+    bottom: var(--banner-spacing);
+    right: var(--banner-spacing);
+    z-index: 5;
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.nav-header-title {
+    color: white;
+}
+.nav-header-actions {
+    display: flex;
+    button {
+        margin-left: 8px;
+        color: var(--text-color);
+        background-color: transparent;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+        &:hover {
+            color: white;
+        }
+    }
+}
+.nav-slider-list {
+    display: flex;
+    width: fit-content;
+    margin: 16px 0;
+}
+.nav-slider-item {
+    width: 120px;
+    overflow: hidden;
+    margin: 0 4px;
+    &:first-child {
+        transform: scale(1.1);
+        margin-right: 10px;
+    }
+    img {
+        width: 100%;
+    }
+    p {
+        font-size: 1.5rem;
+        text-align: center;
+        color: white;
     }
 }

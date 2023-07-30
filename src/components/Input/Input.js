@@ -3,8 +3,8 @@ import React from 'react';
 import styles from './Input.module.scss';
 
 const cx = classNames.bind(styles);
-function Input({ lable, description, placeholder, flex }) {
-    const classes = cx('input', { flex });
+function Input({ lable, description, placeholder, flex, unspace }) {
+    const classes = cx('input', { flex, unspace });
     return (
         <div className={classes}>
             <div className={cx('input-info')}>

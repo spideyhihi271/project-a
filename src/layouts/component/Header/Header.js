@@ -13,7 +13,7 @@ function Header() {
         <div className={cx('wrapper')}>
             <header className={cx('header-container')}>
                 <div className={cx('header-logo-nav')}>
-                    <Link to={'/'} className={cx('logo')}>
+                    <Link to={config.routes.home} className={cx('logo')}>
                         <img
                             src="https://www.nicepng.com/png/full/223-2235489_want-logo-hbo-white.png"
                             alt=""
@@ -21,13 +21,22 @@ function Header() {
                     </Link>
                     <nav className={cx('navbar')}>
                         <ul className={cx('nav-list')}>
-                            <Link to={'/'} className={cx('nav-list-item')}>
+                            <Link
+                                to={config.routes.home}
+                                className={cx('nav-list-item')}
+                            >
                                 Trang chủ
                             </Link>
-                            <Link to={'/'} className={cx('nav-list-item')}>
+                            <Link
+                                to={config.routes.movie}
+                                className={cx('nav-list-item')}
+                            >
                                 Phim điện ảnh
                             </Link>
-                            <Link to={'/2'} className={cx('nav-list-item')}>
+                            <Link
+                                to={config.routes.series}
+                                className={cx('nav-list-item')}
+                            >
                                 Phim bộ
                             </Link>
                             <Link
@@ -36,7 +45,10 @@ function Header() {
                             >
                                 Gói dịch vụ
                             </Link>
-                            <Link to={'/4'} className={cx('nav-list-item')}>
+                            <Link
+                                to={config.routes.playlist}
+                                className={cx('nav-list-item')}
+                            >
                                 Phim đã thêm
                             </Link>
                         </ul>

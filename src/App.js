@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
+import { MainLayout } from './layouts';
 import { publicRoutes } from './routes';
-import { FlexLayout, MainLayout } from './layouts';
 
 function App() {
     return (
@@ -13,6 +13,7 @@ function App() {
                         const Page = route.component;
                         // Check layout
                         let Layout = MainLayout;
+                        if (route.layout) Layout = route.layout;
                         // Logic here
                         return (
                             <Route
