@@ -1,0 +1,12 @@
+.movie {
+    &-wrapper {
+        display: block;
+        overflow-x: hidden;
+    }
+    &-slider {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        height: calc( var(--movie-item-h) * 1.3);
+    }
+}

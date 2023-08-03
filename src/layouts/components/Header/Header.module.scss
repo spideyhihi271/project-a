@@ -1,0 +1,92 @@
+.header {
+    &-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 0 var(--padding-spacing);
+        height: var(--session-header-h);
+        width: 100%;
+        background-color: var(--third-color);
+    }
+    &-content {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+}
+
+.content {
+    &-logo {
+        width: 100px;
+    }
+    &-nav {
+        flex: 1;
+        margin: 0 16px;
+    }
+    &-actions {
+        width: fit-content;
+    }
+}
+
+// Navbar
+.nav {
+    &-list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+    }
+    &-item {
+        margin: 0 8px;
+    }
+    &-link {
+        font-size: 14px;
+        color: var(--four-color);
+        &:hover {
+            color: var(--second-color);
+        }
+    }
+}
+
+// Actions
+.actions {
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-item {
+        margin: 0 32px;
+        cursor: pointer;
+    }
+    &-link {
+        color: var(--four-color);
+    }
+}
+
+// Logger
+.logger {
+    &-lable {
+        display: flex;
+        align-items: center;
+        margin-left: 32px;
+        cursor: pointer;
+        &:hover {
+            .logger-icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &-avt {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+    }
+    &-icon {
+        transition: 0.5s;
+        i {
+            font-size: 14px;
+        }
+    }
+}

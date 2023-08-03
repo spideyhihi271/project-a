@@ -1,32 +1,72 @@
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 15px 10px;
-    width: 100%;
-    text-align: left;
-    font-size: 1.5rem;
-    color: white;
-    background-color: transparent;
-    cursor: pointer;
+:root {
+    --button-h: 35px;
+    --button-icon: 30px;
+    --button-image: 30px;
 }
-.wrapper + .wrapper {
-    margin-right: 8px;
+.button {
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: var(--button-h);
+        cursor: pointer;
+    }
+    &-content {
+        margin: 0 8px;
+    }
+}
+
+// Style
+.style {
+    &-primary {
+        background-color: var(--main-color);
+        color: var(--four-color);
+    }
+    &-secondary {
+        background-color: var(--second-color);
+        color: var(--four-color);
+    }
+    &-rounded {
+        border-radius: 10px;
+    }
+    &-text {
+        background-color: transparent;
+        color: white;
+    }
+    &-onlyicon {
+        width: var(--button-h);
+        height: var(--button-h);
+        color: white;
+        border-radius: 50%;
+        background-color: transparent;
+        .button-content {
+            width: 100%;
+            text-align: center;
+            i {
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+    }
+    &-freesize {
+        width: fit-content;
+        height: fit-content;
+    }
 }
 
 // Icon
 .icon {
-    font-size: 2rem;
-}
-.icon + .content,
-.content + .icon {
-    margin-left: 8px;
+    &-right,
+    &-left {
+        width: var(--button-icon);
+    }
 }
 
-// Type
-.text {
-    background-color: transparent;
-    &:hover {
-        background-color: var(--second-color);
+//Image
+.image {
+    &-right,
+    &-left {
+        width: var(--button-image);
+        height: var(--button-image);
     }
 }

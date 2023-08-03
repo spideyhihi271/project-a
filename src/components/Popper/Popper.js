@@ -1,20 +1,25 @@
 import React from 'react';
+import Tippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import styles from './Popper.module.scss';
-import Tippy from '@tippyjs/react/headless';
+import Notify from './Notify/';
+import Logger from './Logger/';
 
 const cx = classNames.bind(styles);
-function Popper({ children, className, show }) {
+function Popper({ children, content = '' }) {
+    // Check content
+    let View = Notify;
+    if (content.includes('logger')) View = Logger;
     return (
         <Tippy
             interactive
             render={(attrs) => (
                 <div className="box" tabIndex="-1" {...attrs}>
-                    {show}
+                    <View />
                 </div>
             )}
         >
-            <div className={cx('wrapper', { className })}>{children}</div>
+            <div className={cx('popper-wrapper')}>{children}</div>
         </Tippy>
     );
 }
