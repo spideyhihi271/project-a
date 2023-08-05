@@ -1,5 +1,4 @@
 import classNames from 'classnames/bind';
-import React from 'react';
 import styles from './Banner.module.scss';
 const cx = classNames.bind(styles);
 
@@ -8,30 +7,34 @@ function Banner() {
         <div className={cx('banner-wrapper')}>
             <img
                 className={cx('banner-thumb')}
-                src="https://occ-0-395-55.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABeCCECNfaerQYHzjecod-YAtkaSK-IorupJ9TohYSUsZcWqWiz6eD6b01PQDuT0vnSVE7qqzbnWH7vT1uGPex4DirKjgqaSegjp6.webp?r=2e7"
+                src="https://wallpaperaccess.com/full/1301014.jpg"
                 alt=""
             />
-            <div className={cx('banner-content')}>
-                <img
-                    className={cx('content-name')}
-                    src="https://occ-0-395-55.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABQHsCYWiyvitWjSG9lu7AfKjGEgWlRV84HpczEf0QFBSE8ouh0oQo9RGilGFwqyIqlSWhIeTiNeXmMn3CSvZT1mCG-Au6z4xyQJwtdv-Ttyu.webp?r=6b8"
-                    alt=""
-                />
-                <div className={cx('content-tag')}>
-                    <div className={cx('tag-icon')}>
-                        TOP <span className={cx('tag-num')}>10</span>
-                    </div>
-                    <p className={cx('tag-title')}>Số 1 thịnh hành hôm nay</p>
-                </div>
-                <p className={cx('content-description')}>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quia, consequuntur inventore eaque, assumenda quos eveniet
-                    temporibus nostrum provident reiciendis quibusdam cum
-                    similique perferendis magni quidem nesciunt veniam.
-                    Officiis, id modi.
+            <div className={cx('banner-filter')}></div>
+            <div className={cx('banner-info')}>
+                <h1 className={cx('info-name')}>Dunkirk</h1>
+                <p className={cx('info-description')}>
+                    Những người lính Đồng minh từ Bỉ, Khối thịnh vượng chung và
+                    Đế quốc Anh, và Pháp bị Quân đội Đức bao vây và sơ tán trong
+                    một trận chiến khốc liệt trong Thế chiến II.
                 </p>
-                <div className={cx('content-actions')}>
-                    
+                <div className={cx('info-more')}>
+                    <p className={cx('info-tag')}>TOP 10</p>
+                    <p className={cx('info-derector')}>Christopher Nolan</p>
+                </div>
+                <div className={cx('info-more')}>
+                    <p className={cx('info-publics')}>2027</p>
+                    <span className={cx('info-middle')}>
+                        <i className="fa-duotone fa-circle"></i>
+                    </span>
+                    <p className={cx('info-genders')}>Hành động, Chiến tranh</p>
+                </div>
+                <div className={cx('info-mark')}>
+                    <div className={cx('mark-icon')}>
+                        <i class="fa-sharp fa-solid fa-fire"></i>
+                    </div>
+                    <p className={cx('mark-movie')}>8.7</p>
+                    <p className={cx('mark-title')}>/10</p>
                 </div>
             </div>
         </div>

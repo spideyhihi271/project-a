@@ -3,13 +3,8 @@
         position: relative;
         display: block;
         height: var(--movie-item-h);
-        width: var(--movie-item-w);
-        margin-right: 8px;
+        width: 100%;
         cursor: pointer;
         transition: all ease-in-out 0.2s;
-        &:hover {
-            height: calc(var(--movie-item-h) * 1.2);
-            width: calc(var(--movie-item-w) * 1.2);
-        }
     }
 }
