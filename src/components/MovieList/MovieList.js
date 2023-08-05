@@ -9,7 +9,7 @@ function MovieList({ title, link, typeList, typeItem }) {
     return (
         <div className={cx('list-wrapper')}>
             <Header title={title} />
-            <Lists />
+            <Lists type={typeList} />
         </div>
     );
 }

@@ -1,11 +1,13 @@
-import React from 'react';
 import Default from './Default';
-import Slider from './Slider/Slider';
+import Slider from './Slider';
 
-function Lists() {
+function Lists({ type }) {
+    // Check Type
+    let Layout = Default;
+    if (type === 1) Layout = Slider;
     return (
         <>
-            <Slider />
+            <Layout />
         </>
     );
 }

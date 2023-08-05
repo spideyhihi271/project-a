@@ -4,6 +4,7 @@ import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
 import images from '~/assets/images';
 import Popper from '~/components/Popper/';
+import config from '~/configs';
 
 const cx = classNames.bind(styles);
 function Header() {
@@ -20,29 +21,51 @@ function Header() {
                 <nav className={cx('content-nav')}>
                     <ul className={cx('nav-list')}>
                         <li className={cx('nav-item')}>
-                            <Link className={cx('nav-link')}>Trang chủ</Link>
+                            <Link
+                                to={config.routes.home}
+                                className={cx('nav-link')}
+                            >
+                                Trang chủ
+                            </Link>
                         </li>
                         <li className={cx('nav-item')}>
-                            <Link className={cx('nav-link')}>
+                            <Link
+                                to={config.routes.series}
+                                className={cx('nav-link')}
+                            >
                                 Phim truyền hình
                             </Link>
                         </li>
                         <li className={cx('nav-item')}>
-                            <Link className={cx('nav-link')}>Phim</Link>
+                            <Link
+                                to={config.routes.movies}
+                                className={cx('nav-link')}
+                            >
+                                Phim
+                            </Link>
                         </li>
                         <li className={cx('nav-item')}>
-                            <Link className={cx('nav-link')}>
+                            <Link
+                                to={config.routes.home}
+                                className={cx('nav-link')}
+                            >
                                 Mới và phổ biến
                             </Link>
                         </li>
                         <li className={cx('nav-item')}>
-                            <Link className={cx('nav-link')}>
-                                Danh sách của tôi
+                            <Link
+                                to={config.routes.home}
+                                className={cx('nav-link')}
+                            >
+                                Duyệt tìm theo ngôn ngữ
                             </Link>
                         </li>
                         <li className={cx('nav-item')}>
-                            <Link className={cx('nav-link')}>
-                                Duyệt tìm theo ngôn ngữ
+                            <Link
+                                to={config.routes.package}
+                                className={cx('nav-link')}
+                            >
+                                Gói dịch vụ
                             </Link>
                         </li>
                     </ul>

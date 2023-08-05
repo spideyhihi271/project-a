@@ -12,12 +12,6 @@ function Slider() {
                 <Items />
                 <Items />
                 <Items />
-                <Items />
-                <Items />
-                <Items />
-                <Items />
-                <Items />
-                <Items />
             </div>
         </div>
     );

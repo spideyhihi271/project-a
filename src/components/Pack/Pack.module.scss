@@ -1,0 +1,125 @@
+:root {
+    --item-header: 130px;
+    --item-features-h: 50px;
+    --avt-size: 35px;
+}
+.pack {
+    &-wrapper {
+        display: block;
+        margin-top: var(--session-header-h);
+        padding: 1% var(--padding-spacing);
+        color: white;
+    }
+    &-title {
+        font-size: 40px;
+        text-align: center;
+        span {
+            color: var(--main-color);
+        }
+    }
+    &-description {
+        margin: 16px auto;
+        width: 35%;
+        text-align: center;
+        color: var(--second-color);
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin: 0 auto;
+        list-style-type: none;
+    }
+    &-item {
+        border: 1px solid var(--six-color);
+    }
+}
+
+//More
+.more {
+    &-list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        width: fit-content;
+        margin: 32px auto;
+    }
+    &-item {
+        font-size: 15px;
+        margin-right: 16px;
+        i {
+            font-size: 14px;
+            color: var(--second-color);
+            margin-right: 8px;
+        }
+    }
+}
+
+// Pack -info
+.info {
+    &-header {
+        width: 100%;
+        height: var(--item-header);
+    }
+}
+
+.features {
+    &-list {
+        width: 100%;
+        list-style-type: none;
+        background-color: var(--six-color);
+        border: 1px solid var(--six-color);
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        height: var(--item-features-h);
+        padding: 0 10px;
+    }
+}
+
+// Pack item
+.item {
+    &-header {
+        width: 100%;
+        height: var(--item-header);
+        padding: 0 15px;
+        padding-top: 10px;
+    }
+    &-name {
+        text-align: center;
+        font-size: 25px;
+    }
+    &-price {
+        color: var(--second-color);
+        text-align: center;
+        margin: 4px 0;
+        span {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+    &-btn {
+        width: 100%;
+        height: 35px;
+        color: white;
+        background-color: var(--six-color);
+        cursor: pointer;
+        &:hover {
+            background-color: var(--main-color);
+        }
+    }
+}
+.item-features {
+    &-list {
+        list-style: none;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: var(--item-features-h);
+    }
+}

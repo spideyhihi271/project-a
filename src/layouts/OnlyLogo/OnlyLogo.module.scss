@@ -1,0 +1,14 @@
+.layout {
+    &-wrapper {
+    }
+    &-header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: var(--session-header-h);
+        padding: var(--padding-spacing);
+    }
+    &-logo {
+        width: 150px;
+    }
+}

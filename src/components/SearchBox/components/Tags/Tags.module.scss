@@ -1,0 +1,21 @@
+.tags {
+    &-wrapper {
+        color: white;
+        width: fit-content;
+        margin: 16px auto;
+    }
+    &-list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+    }
+    &-item {
+        margin-right: 8px;
+    }
+    &-link {
+        padding: 8px 10px;
+        color: var(--second-color);
+        background-color: var(--six-color);
+        border-radius: 10px;
+    }
+}

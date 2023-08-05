@@ -1,6 +1,4 @@
-import React from 'react';
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
 
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
