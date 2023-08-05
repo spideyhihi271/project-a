@@ -5,9 +5,15 @@ import { Link } from 'react-router-dom';
 import images from '~/assets/images';
 import Popper from '~/components/Popper/';
 import config from '~/configs';
+import { useState } from 'react';
+
 
 const cx = classNames.bind(styles);
 function Header() {
+    const [isShow, setIsShow] = useState(false);
+    const showMenu = () => {
+        setIsShow(!isShow);
+    }
     return (
         <div className={cx('header-wrapper')}>
             <div className={cx('header-content')}>

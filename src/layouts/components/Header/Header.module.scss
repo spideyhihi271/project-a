@@ -89,3 +89,47 @@
         }
     }
 }
+// reponsive styles
+$mobile: 480px;
+@media (max-width: $mobile) {
+    .header {
+    &-wrapper {
+        padding: 0 12px;
+        height: 52px;
+    }
+}
+
+ .content {
+        &-logo {
+            width: 50px;
+        }
+    }
+
+    .nav {
+    &-list {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 200px;
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        background-color: #000000;
+        padding-top: 24px;
+        display: none;
+    }
+    &-item {
+        margin: 0 8px;
+    }
+    &-link {
+        font-size: 14px;
+        color: var(--four-color);
+        &:hover {
+            color: var(--second-color);
+        }
+    }
+}
+}
+
