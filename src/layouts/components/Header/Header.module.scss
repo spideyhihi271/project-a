@@ -89,47 +89,88 @@
         }
     }
 }
+.icon-menu {
+    display: none;
+}
 // reponsive styles
 $mobile: 480px;
 @media (max-width: $mobile) {
     .header {
-    &-wrapper {
-        padding: 0 12px;
-        height: 52px;
+        &-wrapper {
+            padding: 0 12px;
+            height: 52px;
+        }
     }
-}
 
- .content {
+    .content {
         &-logo {
-            width: 50px;
+            width: 60px;
+            margin-left: 8px;
+            margin-top: 2px;
         }
     }
 
     .nav {
-    &-list {
-        position: fixed;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 200px;
-        align-items: start;
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        background-color: #000000;
-        padding-top: 24px;
-        display: none;
-    }
-    &-item {
-        margin: 0 8px;
-    }
-    &-link {
-        font-size: 14px;
-        color: var(--four-color);
-        &:hover {
-            color: var(--second-color);
+        &-list {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+            align-items: start;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            background-color: #000000;
+            padding-top: 24px;
+            animation: slideIn;
+            animation-duration: 1s;
+        }
+        &-item{
+            margin-top: 12px;
+            margin-left: 24px;
         }
     }
+    .icon-menu {
+        display: block;
+        color: var(--four-color);
+        cursor: pointer;
+    }
+    .icon-close{
+        position: absolute;
+        top: 12px;
+        right: 12%;
+        color: #fff;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .module {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        display: none;
+    }
+    .block {
+        display: block !important;
+    }
+    @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);  
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes slideOut {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
 }
-}
-

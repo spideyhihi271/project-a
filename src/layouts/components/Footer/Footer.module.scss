@@ -61,6 +61,30 @@
     margin: 16px 0;
 
 }
+// reponsive styles
+$mobile: 480px;
+@media (max-width: $mobile) {
+    .footer-wrapper{
+        padding:  72px 24px 0 24px;
+    }
+    .footer{
+        padding: 0 24px ;
+    }
+    .icon-socialNetwork{
+        width: 100%;
+        margin-left: 0;
+    }
+    .container-links{
+        flex-direction: column;
+    }
+    .content-links ul li{
+        width: 60%;
+        margin-bottom: 12px;
+    }
+    .about-footer{
+        margin: 16px 0;
+    }
+}
 
 
 
