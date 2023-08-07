@@ -92,6 +92,9 @@
 .icon-menu {
     display: none;
 }
+.icon-close{
+    display: none;
+}
 // reponsive styles
 $mobile: 480px;
 @media (max-width: $mobile) {
@@ -131,19 +134,23 @@ $mobile: 480px;
             margin-left: 24px;
         }
     }
-    .icon-menu {
-        display: block;
+    .icon{
+        &-menu{
+            display: block;
         color: var(--four-color);
         cursor: pointer;
+        }
+        &-close{
+            position: absolute;
+            top: 12px;
+            right: 12%;
+            color: #fff;
+            z-index: 1;
+            cursor: pointer;
+            display: block;
     }
-    .icon-close {
-        position: absolute;
-        top: 12px;
-        right: 12%;
-        color: #fff;
-        z-index: 1;
-        cursor: pointer;
-    }
+}
+
     .module {
         position: fixed;
         top: 0;
