@@ -49,11 +49,20 @@
             }
         }
     }
+}
+
+// Size
+.size {
     &-freesize {
         width: fit-content;
         height: fit-content;
     }
+    &-larger {
+        height: 50px;
+    }
 }
+
+// Content
 
 // Icon
 .icon {

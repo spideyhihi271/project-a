@@ -13,6 +13,7 @@ function Button({
     rounded = false,
     text = false,
     freesize = false,
+    larger = false,
     onlyIcon = false,
     leftIcon,
     rightIcon,
@@ -38,7 +39,8 @@ function Button({
         'style-secondary': secondary,
         'style-rounded': rounded,
         'style-text': text,
-        'style-freesize': freesize,
+        'size-freesize': freesize,
+        'size-larger': larger,
         'style-onlyicon': onlyIcon,
     });
     return (

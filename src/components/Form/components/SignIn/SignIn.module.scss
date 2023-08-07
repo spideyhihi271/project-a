@@ -1,0 +1,88 @@
+.form {
+    &-wrapper {
+        display: block;
+        width: fit-content;
+        min-width: 32vw;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &-title {
+        color: white;
+    }
+    &-description {
+        margin: 4px 0;
+        font-size: 15px;
+        color: var(--second-color);
+    }
+    &-container {
+        margin: 32px 0;
+    }
+    &-change {
+        margin: 16px 0;
+        transform: translateY(25%);
+        color: white;
+    }
+}
+
+//menthod
+.menthod {
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        list-style-type: none;
+    }
+    &-item {
+        height: 100%;
+        width: 48%;
+    }
+    &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        font-weight: 600;
+        color: var(--second-color);
+        background-color: var(--six-color);
+        cursor: pointer;
+        i {
+            margin-right: 8px;
+        }
+    }
+}
+
+//Input
+.input {
+    &-item {
+        margin: 32px 0;
+    }
+}
+
+// Actions
+.actions {
+    &-list {
+        list-style-type: none;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+// Remender
+.remember {
+    &-box {
+        display: flex;
+        align-items: center;
+    }
+    &-input {
+        display: block;
+    }
+    &-title {
+        color: white;
+    }
+}

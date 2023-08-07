@@ -31,7 +31,7 @@ function Banner() {
                 </div>
                 <div className={cx('info-mark')}>
                     <div className={cx('mark-icon')}>
-                        <i class="fa-sharp fa-solid fa-fire"></i>
+                        <i className="fa-sharp fa-solid fa-fire"></i>
                     </div>
                     <p className={cx('mark-movie')}>8.7</p>
                     <p className={cx('mark-title')}>/10</p>

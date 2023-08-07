@@ -12,11 +12,8 @@
 // Main
 .main {
     &-title {
+        font-size: 19px;
         color: var(--four-color);
-    }
-    &-total {
-        font-size: 16px;
-        color: var(--second-color);
     }
     &-description {
         color: var(--second-color);

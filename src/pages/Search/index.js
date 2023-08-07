@@ -6,7 +6,14 @@ function Search() {
     return (
         <>
             <SearchBox />
-            <MovieList title={'Kết quả tìm kiếm'}/>
+            <MovieList
+                title={'Kết quả tìm kiếm'}
+                props={{
+                    title: 'Kết quả tìm kiếm cho',
+                    list: 'default',
+                    item: 'default',
+                }}
+            />
         </>
     );
 }

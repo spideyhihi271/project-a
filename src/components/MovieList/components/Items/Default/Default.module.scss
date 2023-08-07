@@ -1,120 +1,193 @@
+:root {
+    --item-padding: 10px;
+    --item-actions-btn: 40px;
+}
 .default {
     &-wrapper {
         position: relative;
         display: block;
         width: 100%;
         height: 100%;
-        border-radius: 10px;
-        overflow: hidden;
-        &:hover {
-            .default-hover {
-                opacity: 1;
-            }
-        }
     }
-    &-tag {
+    &-container {
         position: absolute;
-        top: var(--movie-item-spacing);
-        right: var(--movie-item-spacing);
-        z-index: 2;
-        padding: 4px 5px;
-        font-size: 13px;
-        color: white;
-        border-radius: 10px;
-        background-color: rgba($color: #ffff, $alpha: 0.3);
-    }
-    &-thumb {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        &:hover {
-            transform: translate(1.2);
-        }
+        transition: all ease-in-out 0.3s;
     }
     &-brand {
         position: absolute;
-        top: var(--movie-item-spacing);
-        left: var(--movie-item-spacing);
+        top: var(--item-padding);
+        left: var(--item-padding);
         z-index: 1;
         width: 12px;
     }
-    &-hover {
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 5;
-        transition: all ease-in-out 0.3s;
-    }
-    &-timer {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 6;
-        width: 50%;
-        height: 3px;
-        background-color: var(--main-color);
-    }
-}
-
-// Hover
-.hover {
     &-filter {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 0;
         width: 100%;
         height: 100%;
+        z-index: 1;
         background-image: linear-gradient(
             to top,
-            rgba($color: #000000, $alpha: 0.8),
+            rgba($color: #000000, $alpha: 0.5),
             rgba($color: #000000, $alpha: 0)
         );
     }
-    &-info {
-        position: absolute;
-        bottom: var(--movie-item-spacing);
-        left: var(--movie-item-spacing);
-        z-index: 1;
+    &-thumb {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &-hovering {
+        display: block;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
     }
 }
 
-// Info
-.info {
-    &-name {
-        font-weight: 600;
+//Hover : Effect
+.default-wrapper:hover {
+    .default {
+        &-container {
+            position: absolute;
+            z-index: 10;
+            width: 112%;
+            height: fit-content;
+            background-color: var(--six-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px var(--six-color);
+        }
+        &-filter,
+        &-thumb {
+            display: none;
+        }
+        &-hovering {
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: unset;
+        }
+    }
+}
+
+// Hovering
+.hovering {
+    &-trailer {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &-movie {
+        display: block;
+        width: 100%;
+        height: 100%;
         color: white;
+        padding: 20px 10px;
+    }
+}
+
+// Trailer
+.trailer {
+    &-videos {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &-sub {
+        position: absolute;
+        left: var(--item-padding);
+        bottom: var(--item-padding);
+        display: block;
+        max-height: 60%;
+        max-width: 50%;
+    }
+    &-tag {
+        width: 35%;
+    }
+    &-name {
+        width: 100%;
+    }
+}
+
+// Movie
+.movie {
+    &-description {
+        font-size: 13px;
+        color: var(--second-color);
     }
     &-more {
-        margin: 2px 0;
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+    }
+    &-tag {
+        padding: 2px 5px;
+        margin-right: 8px;
+        font-size: 13px;
+        color: white;
+        background-color: red;
+    }
+    &-gender {
+        font-size: 14px;
+    }
+    &-public,
+    &-lenght {
+        font-size: 14px;
+        margin-right: 8px;
+    }
+    &-sub {
+        padding: 1px 5px;
+        margin-right: 8px;
+        font-size: 14px;
+        border: 1px solid var(--second-color);
     }
 }
 
-// More
-.more {
+// Actions
+.actions {
     &-list {
+        position: relative;
         display: flex;
         align-items: center;
         list-style-type: none;
     }
     &-item {
-        padding: 1px 5px;
         margin-right: 8px;
-        font-size: 13px;
-        color: var(--second-color);
+        &:first-child {
+            .actions-btn {
+                background-color: white;
+                i {
+                    color: var(--six-color);
+                }
+            }
+        }
+        &:last-child {
+            position: absolute;
+            right: 0;
+        }
+    }
+    &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--item-actions-btn);
+        height: var(--item-actions-btn);
+        border-radius: 50%;
+        background-color: transparent;
         border: 1px solid var(--second-color);
-        &:first-child,
-        &:nth-child(2) {
+        cursor: pointer;
+        i {
+            font-size: 16px;
             color: white;
-            border: transparent;
-            padding: 0;
         }
     }
 }

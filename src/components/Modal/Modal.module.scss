@@ -1,0 +1,39 @@
+.modal {
+    &-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    &-layer,
+    &-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+    }
+    &-container {
+        z-index: 1;
+        background-color: transparent;
+    }
+    &-content {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 10px;
+        background-color: var(--third-color);
+    }
+    &-close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 10;
+    }
+}

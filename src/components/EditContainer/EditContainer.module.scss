@@ -1,0 +1,70 @@
+.edit {
+    &-wrapper {
+        margin: 0 auto;
+        margin-top: var(--session-header-h);
+        padding: 1% var(--padding-spacing);
+        display: block;
+        width: 80%;
+        color: white;
+    }
+    &-title {
+        font-size: 30px;
+    }
+    &-list {
+        width: 100%;
+    }
+    &-item {
+        padding: 10px 0;
+        display: flex;
+        border: 1px solid var(--second-color);
+        border-left: none;
+        border-right: none;
+    }
+}
+
+// Item
+.item {
+    &-side {
+        width: 30%;
+        margin-right: 32px;
+    }
+    &-main {
+        flex: 1;
+    }
+    &-title {
+        font-size: 20px;
+        color: var(--second-color);
+    }
+}
+
+// info
+.info {
+    &-list {
+        list-style-type: none;
+    }
+    &-item {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-item {
+        color: var(--second-color);
+    }
+    &-special {
+        color: white;
+        font-weight: bold;
+    }
+    &-title {
+        max-width: 55%;
+    }
+    &-actions {
+        font-size: 15px;
+        color: var(--second-color);
+        background-color: transparent;
+        cursor: pointer;
+        &:hover {
+            color: var(--main-color);
+        }
+    }
+}

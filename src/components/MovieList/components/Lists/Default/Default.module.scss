@@ -1,8 +1,11 @@
 .default {
     &-wrapper {
+        position: static;
+        margin: 16px 0;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 8px;
-        margin: 16px 0;
+        height: var(--movie-item-h);
+        overflow: visible;
     }
 }

@@ -1,18 +1,11 @@
 import classNames from 'classnames/bind';
 
 import styles from './Slider.module.scss';
-import Items from '../../Items';
 const cx = classNames.bind(styles);
-function Slider() {
+function Slider({ children }) {
     return (
         <div className={cx('movie-wrapper')}>
-            <div className={cx('movie-slider')}>
-                <Items />
-                <Items />
-                <Items />
-                <Items />
-                <Items />
-            </div>
+            <div className={cx('movie-slider')}>{children}</div>
         </div>
     );
 }

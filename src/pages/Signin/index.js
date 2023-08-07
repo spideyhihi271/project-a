@@ -1,10 +1,10 @@
 import React from 'react';
-import AuthForm from '~/components/AuthForm';
+import Form from '~/components/Form';
 
 function Signin() {
     return (
         <>
-            <AuthForm />
+            <Form />
         </>
     );
 }

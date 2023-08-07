@@ -1,0 +1,46 @@
+:root {
+    --espison-h: 120px;
+}
+.espison {
+    &-wrapper {
+        margin: 8px 0;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        height: var(--espison-h);
+        width: 100%;
+        background-color: var(--six-color);
+        border-radius: 10px;
+    }
+    &-order {
+        margin-right: 16px;
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--second-color);
+    }
+    &-thumb {
+        margin-right: 8px;
+        height: 80%;
+        width: 120px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    &-container {
+        flex: 1;
+    }
+    &-header {
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-order-h,
+    &-lenght {
+        font-weight: bold;
+        color: white;
+    }
+    &-content {
+        font-size: 14px;
+        color: var(--second-color);
+    }
+}

@@ -1,0 +1,11 @@
+
+
+.input {
+    &-gr-list {
+        list-style-type: none;
+    }
+    &-gr-item {
+        display: flex;
+        margin: 32px 0;
+    }
+}

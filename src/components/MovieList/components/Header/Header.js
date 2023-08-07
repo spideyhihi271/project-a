@@ -3,15 +3,12 @@ import classNames from 'classnames/bind';
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 const cx = classNames.bind(styles);
-function Header({ title, description, link }) {
+function Header({ props }) {
     return (
         <div className={cx('header-wrapper')}>
             <div className={cx('header-main')}>
-                <h2 className={cx('main-title')}>
-                    {title}
-                    <span className={cx('main-total')}> | 4 phim </span>
-                </h2>
-                <p className={cx('main-description')}>{description}</p>
+                <h2 className={cx('main-title')}>{props.title}</h2>
+                <p className={cx('main-description')}>{props.description}</p>
             </div>
             <div className="header-side">
                 <div className={cx('side-actions')}>

@@ -8,6 +8,8 @@ import Detail from '~/pages/Detail';
 import Home from '~/pages/Home';
 import Movies from '~/pages/Movies';
 import Packages from '~/pages/Packages';
+import Payment from '~/pages/Payment';
+import Profile from '~/pages/Profile';
 import Search from '~/pages/Search';
 import Series from '~/pages/Series';
 import Signin from '~/pages/Signin';
@@ -44,9 +46,17 @@ const publicRoutes = [
         component: Packages,
     },
     {
+        path: config.routes.payment,
+        component: Payment,
+    },
+    {
         path: config.routes.signin,
         component: Signin,
         layout: OnlyLogo,
+    },
+    {
+        path: config.routes.profile,
+        component: Profile,
     },
 ];
 const privateRoutes = {};
