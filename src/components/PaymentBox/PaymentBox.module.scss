@@ -77,19 +77,15 @@ $mobile: 480px;
 @media screen and (max-width: $mobile) {
     .payment {
         &-wrapper {
-            padding: var(--padding-spacing-mobile);
+            width: 410px;
+            padding:0 var(--padding-spacing-mobile);
         }
         &-header {
-            width: 300px ;
+            width: 100% ;
             margin: 0 auto;
-            text-align: center;
         }
         &-title {
             width: 100%;
-            font-size: 25px;
-        }
-        &-description {
-            color: var(--second-color);
         }
         &-main {
             margin: 32px var(--padding-spacing-mobile);
@@ -104,48 +100,8 @@ $mobile: 480px;
     // bill
     .bill {
         &-wrapper {
-            margin: 0 auto;
-            width: 60%;
-        }
-        &-header {
-            margin: 32px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        &-title {
-            font-weight: bold;
-        }
-        &-return {
-            font-size: 15px;
-            color: var(--second-color);
+            width: 100%;
         }
     }
-    // info
-    .info {
-        &-list {
-            list-style-type: none;
-        }
-        &-item {
-            margin: 8px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            &:last-child {
-                margin-top: 15px;
-                padding-top: 15px;
-                border-top: 1px solid var(--second-color);
-                .info-value {
-                    font-size: 20px;
-                    color: var(--main-color);
-                }
-            }
-        }
-        &-title {
-            color: var(--second-color);
-        }
-        &-value {
-            font-weight: bold;
-        }
-    }
+
 }

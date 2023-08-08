@@ -50,3 +50,11 @@
         transform: translateY(0);
     }
 }
+$mobile: 480px;
+@media screen and (max-width: $mobile) {
+    .input {
+        &-wrapper {
+           min-width: 0;
+        }
+    }
+}
