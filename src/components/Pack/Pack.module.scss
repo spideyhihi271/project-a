@@ -141,6 +141,13 @@ $mobile: 480px;
             color: var(--second-color);
             font-size: 12px;
         }
+        &-list {
+            position: relative;
+           display: flex;
+        }
+        &-item{
+            width: 200px;
+        }
     }
 
     //More
@@ -164,4 +171,56 @@ $mobile: 480px;
             margin-right: 8px;
         }
     }
-    }}
+    }
+    .features {
+        &-list {
+            width: 100%;
+            list-style-type: none;
+            background-color: var(--six-color);
+            border: 1px solid var(--six-color);
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:50px;
+            font-size: 8px;
+            height: var(--item-features-h);
+            padding: 0 4px;
+        }
+    }
+    .item {
+        &-header {
+            width: 100%;
+            height: var(--item-header);
+            padding: 0;
+            padding-top: 10px;
+        }
+        &-name {
+            font-size: 10px;
+        }
+        &-price {
+            margin: 4px 0;
+            font-size: 12px;
+            span {
+                font-size: 10px;
+                color: white;
+                font-weight: bold;
+            }
+        }
+        &-btn {
+            width: 76px;
+            height: 20px;
+            font-size: 10px;
+        }
+    }
+
+    .item-features {
+        &-list {
+            list-style: none;
+        }
+        &-item {
+            font-size: 12px;
+        }
+    }
+}

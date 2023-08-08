@@ -25,7 +25,7 @@
         min-width: 40vw;
     }
 }
-
+// bill
 .bill {
     &-wrapper {
         margin: 0 auto;
@@ -71,4 +71,37 @@
     &-value {
         font-weight: bold;
     }
+}
+// reponsive   style
+$mobile: 480px;
+@media screen and (max-width: $mobile) {
+    .payment {
+        &-wrapper {
+            width: 410px;
+            padding:0 var(--padding-spacing-mobile);
+        }
+        &-header {
+            width: 100% ;
+            margin: 0 auto;
+        }
+        &-title {
+            width: 100%;
+        }
+        &-main {
+            margin: 32px var(--padding-spacing-mobile);
+            flex-direction: column;
+        }
+        &-form,
+        &-bill {
+            width: 100%;
+            min-width: 10px;
+        }
+    }
+    // bill
+    .bill {
+        &-wrapper {
+            width: 100%;
+        }
+    }
+
 }
