@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Trending() {
+function Trending({ data }) {
     return <div>Trending</div>;
 }
 

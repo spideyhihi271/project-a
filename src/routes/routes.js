@@ -29,11 +29,11 @@ const publicRoutes = [
         component: Series,
     },
     {
-        path: config.routes.detail + '/:id',
+        path: config.routes.detail + '/:idMovie',
         component: Detail,
     },
     {
-        path: config.routes.watch + '/:id',
+        path: config.routes.watch + '/:idMovie',
         component: Watch,
         layout: Fragment,
     },

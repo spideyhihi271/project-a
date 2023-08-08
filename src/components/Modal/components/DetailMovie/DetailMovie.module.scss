@@ -12,9 +12,11 @@
         width: 100%;
         height: 55vh;
     }
+    &-main {
+        padding: 10px var(--detail-modal-padding);
+    }
     &-movie {
         margin: 8px 0;
-        padding: 10px var(--detail-modal-padding);
         display: flex;
         justify-content: space-between;
     }

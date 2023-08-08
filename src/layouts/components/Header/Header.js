@@ -23,7 +23,7 @@ function Header() {
         <div className={cx('header-wrapper')}>
             <div className={cx('header-content')}>
                 <div onClick={showMenu} className={cx('icon-menu')}>
-                    <i class="fa-light fa-bars"></i>
+                    <i className="fa-light fa-bars"></i>
                 </div>
                 <Link className={cx('content-logo')}>
                     <img
@@ -42,7 +42,7 @@ function Header() {
                                 onClick={closeMenu}
                                 className={cx('icon-close')}
                             >
-                                <i class="fa-light fa-xmark"></i>
+                                <i className="fa-light fa-xmark"></i>
                             </div>
                             <li className={cx('nav-item')}>
                                 <Link
@@ -98,7 +98,10 @@ function Header() {
                 <nav className={cx('content-actions')}>
                     <ul className={cx('actions-list')}>
                         <div className={cx('actions-item')}>
-                            <Link className={cx('actions-link')}>
+                            <Link
+                                to={config.routes.search}
+                                className={cx('actions-link')}
+                            >
                                 <i className="fa-light fa-magnifying-glass"></i>
                             </Link>
                         </div>

@@ -1,8 +1,7 @@
-import React from 'react';
 import classNames from 'classnames/bind';
-import styles from './MainLayout.module.scss';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
-import Footer from '../components/Footer/Footer';
+import styles from './MainLayout.module.scss';
 
 const cx = classNames.bind(styles);
 function MainLayout({ children }) {

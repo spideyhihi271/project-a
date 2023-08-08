@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './Epison.module.scss';
 
 const cx = classNames.bind(styles);
-function Epison() {
+function Epison({ data }) {
     return (
         <div className={cx('espison-wrapper')}>
             <p className={cx('espison-order')}>1</p>

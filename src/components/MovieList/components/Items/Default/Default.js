@@ -1,13 +1,35 @@
+import { useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 
+// Asset
 import styles from './Default.module.scss';
 import images from '~/assets/images';
-import video from '~/assets/videos/tearser.mp4';
-import Button from '~/components/Button/Button';
+
+import { johnKeyValue } from '~/utils/arrayHelpers';
+import { getTimes } from '~/utils/getTimes';
+import { Link } from 'react-router-dom';
+import config from '~/configs';
+
 const cx = classNames.bind(styles);
-function Default() {
+function Default({ data }) {
+    const videoRef = useRef();
+    const handelMouseEnter = () => {
+        if (videoRef.current) {
+            videoRef.current.src = `${data.trailerUrl}?autoplay=1&mute=1&loop=1&controls=0`;
+        }
+    };
+    const handelMouseLeave = () => {
+        if (videoRef.current) {
+            videoRef.current.src = '';
+        }
+    };
+    // Render
     return (
-        <div className={cx('default-wrapper')}>
+        <div
+            className={cx('default-wrapper')}
+            onMouseEnter={handelMouseEnter}
+            onMouseLeave={handelMouseLeave}
+        >
             <div className={cx('default-container')}>
                 <div className={cx('default-filter')}></div>
                 <img
@@ -17,18 +39,18 @@ function Default() {
                 />
                 <img
                     className={cx('default-thumb')}
-                    src="https://cdn.tuoitre.vn/thumb_w/1060/471584752817336320/2023/6/5/02-1685933870454878648234.jpg"
+                    src={data.thumbnailUrl}
                     alt=""
                 />
                 <div className={cx('default-hovering')}>
                     <div className={cx('hovering-trailer')}>
-                        <video
+                        <iframe
                             className={cx('trailer-videos')}
-                            src={video}
-                            muted
-                            autoPlay
-                            loop
-                        ></video>
+                            ref={videoRef}
+                            src=""
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        ></iframe>
                         <div className={cx('trailer-sub')}>
                             <img
                                 className={cx('trailer-tag')}
@@ -46,9 +68,14 @@ function Default() {
                         <div className={cx('movie-actions')}>
                             <ul className={cx('actions-list')}>
                                 <li className={cx('actions-item')}>
-                                    <button className={cx('actions-btn')}>
+                                    <Link
+                                        to={
+                                            config.routes.watch + '/' + data._id
+                                        }
+                                        className={cx('actions-btn')}
+                                    >
                                         <i className="fa-duotone fa-play"></i>
-                                    </button>
+                                    </Link>
                                 </li>
                                 <li className={cx('actions-item')}>
                                     <button className={cx('actions-btn')}>
@@ -70,13 +97,19 @@ function Default() {
                         <div className={cx('movie-more')}>
                             <p className={cx('movie-tag')}>TOP 10</p>
                             <p className={cx('movie-gender')}>
-                                Hành động, Giật gân
+                                {johnKeyValue(data.genres)}
                             </p>
                         </div>
                         <div className={cx('movie-more')}>
-                            <p className={cx('movie-public')}>2017</p>
-                            <p className={cx('movie-lenght')}>120 mins</p>
-                            <p className={cx('movie-sub')}>18+</p>
+                            <p className={cx('movie-public')}>
+                                {getTimes(data.releaseDate, 1)}
+                            </p>
+                            <p className={cx('movie-lenght')}>
+                                {data.duration} phút
+                            </p>
+                            <p className={cx('movie-sub')}>
+                                {data.minimumAge}+
+                            </p>
                             <p className={cx('movie-sub')}>HD+</p>
                         </div>
                     </div>
